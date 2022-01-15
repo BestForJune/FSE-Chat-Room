@@ -1,11 +1,16 @@
 {
     "name": "node-ex-website",
     "version": "1.0.0",
-    "description": "",
+    "description": "FSE chat room",
     "scripts": {
-        "start": "node server.js"
+        "start": "node server.js",
+        "dev": "nodemon server.js"
     },
     "dependencies": {
-        "express": "^4.17.1"
+        "express": "^4.17.1",
+        "socket.io": "^4.4.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.15"
     }
 }
