@@ -1,9 +1,12 @@
 
 <!DOCTYPE html>
+<!-- References: 
+    Easy Tutorials "How To Create Login & Registration Form Using HTML CSS & JavaScript" https://www.youtube.com/watch?v=GAOBXGPuKqo
+-->
 <html>
     <head>
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
-        <link href="./css/style.css" rel="stylesheet" />
+        <link href="./css/main.css" rel="stylesheet" />
         <title>FSE chat room</title>
     </head>
     <body>
@@ -14,9 +17,8 @@
             </div>
 
             <div class = "form">
-                <form class="login-form">
+                <form class="login-form" action="room.html">
                     <input type="text" placeholder="Enter Username" name="uname" required>
-
                     <input type="text" placeholder="Enter Password" name="psw" required>
 
                     <button type="submit">Login</button>
@@ -24,13 +26,12 @@
                     <p class="message">Need a Account? <a href="#">Sign up</a></p>
                 </form>
 
-                <form class="register-form">
+                <form class="register-form" action="room.html">
                     <input type="text" placeholder="New Username" name="uname" required>
-    
                     <input type="text" placeholder="New Password" name="psw" required>
     
                     <button type="submit">Register</button>
-    
+                    
                     <p class="message">Already Have the Account? <a href="#">Log in</a></p>
                 </form>
             </div>
@@ -39,7 +40,7 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
             $('.message a').click(function(){
-                $('form').animate({height:"toggle", opacity:"toggle"}, "slow");
+                $('form').animate({height:"toggle", opacity:"toggle"});
             });
         </script>
     </body>

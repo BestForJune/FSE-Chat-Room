@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+}
+*:focus{
+  outline:none;
+}
+
+.header-info {
+  width: 100%;
+  height: 30px;
+  background: rgba(255,255,255,1);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 11px;
+  left: 0px;
+  overflow: hidden;
+}
+.header-cmu {
+  width: 386px;
+  color: rgba(150,18,18,1);
+  position: absolute;
+  top: 0px;
+  left: 22px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 24px;
+  opacity: 1;
+  text-align: left;
+}
+.header-info button{
+  width: 200px;
+  height: 30px;
+  background: rgba(150,18,18,1);
+  margin-left: 80%;
+  opacity: 1;
+  border: none;
+  overflow: hidden;
+  cursor: pointer;
+  outline: 1;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 20px;
+  color: white;
+}
+.form {
+  width: 916px;
+  height: 199px;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 499px;
+  left: 230px;
+  overflow: hidden;
+  border: 2px solid black;
+}
+.form textarea{
+  width: 896px;
+  height: 130px;
+  margin: 10px;
+  opacity: 1;
+  position: absolute;
+  overflow: hidden;
+  border: none;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 18px;
+  overflow-y: scroll;
+}
+.form button{
+  width: 100px;
+  height: 40px;
+  background: rgb(202, 199, 199);
+  margin: 150px 805px auto;
+  opacity: 1;
+  border: none;
+  overflow: hidden;
+  cursor: pointer;
+  outline: 1;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 22px;
+  color: black;
+}
+.chat-message{
+  width: 916px;
+  max-height: 170px;
+  overflow-y: scroll;
+}
+.chat-message .message{
+  padding: 10px;
+	margin-bottom: 15px;
+	background-color: white;
+	border-radius: 1px;
+	overflow-wrap: break-word;
+}
+.chat-message .message{
+  padding: 10px;
+	margin-bottom: 15px;
+	background-color: rgb(122, 122, 122);
+	border-radius: 1px;
+	overflow-wrap: break-word;
+}
