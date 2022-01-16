@@ -57,7 +57,7 @@ body {
   background-size: cover;
   opacity: 1;
   position: absolute;
-  top: 499px;
+  top: 505px;
   left: 230px;
   overflow: hidden;
   border: 2px solid black;
@@ -97,11 +97,10 @@ body {
   top: 70px;
   left: 230px;
   position: absolute;
-  display: flex;
-  flex-direction: column-reverse;
 }
 .chat-message .message .name{
 	color: rgba(150,18,18,1);
+  font-weight: bold;
 	border-radius: 1px;
 }
 .chat-message .message{
@@ -114,4 +113,8 @@ body {
   font-weight: Regular;
   font-size: 18px;
   border-top: 1px solid;
+}
+.chat-message .message .name span{
+  color: rgb(92, 89, 89);
+  font-weight: normal;
 }

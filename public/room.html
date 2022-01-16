@@ -9,7 +9,9 @@
     <body>
         <div class="header-info">
             <span class="header-cmu">Carnegie Mellon University</span>
-            <button type="submit">leave room</button>
+            <a href="./index.html">  
+                <button>leave room</button>  
+            </a>
         </div>
         
         <div class="form" >
@@ -24,19 +26,22 @@
             $('textarea').each(function() {
                 $(this).data('default', this.value);
             }).focusin(function() {
-                if ( this.value == $(this).data('default') ) {
+                if (this.value == $(this).data('default')) {
                     this.value = '';    
                 }
             }).focusout(function() {
-                if ( this.value == '' ) {
-                    this.value = $(this).data('default');    
+                if (this.value == '') {
+                    this.value = $(this).data('default');
                 }
             });
         </script>
 
         <div class="chat-message"></div>
 
+        <!-- get user information -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.3/qs.min.js" integrity="sha512-juaCj8zi594KHQqb92foyp87mCSriYjw3BcTHaXsAn4pEB1YWh+z+XQScMxIxzsjfM4BeVFV3Ij113lIjWiC2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
         <script src="/socket.io/socket.io.js"></script>
-        <script src="./js/main.js"></script>
+        <script src="./js/room.js"></script>
     </body>
 </html>
