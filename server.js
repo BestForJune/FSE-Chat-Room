@@ -9,7 +9,7 @@ const socketio = require('socket.io');
 const moment = require('moment');
 const mongo = require('mongoose');
 const {formatMessage, Msg} = require('./utils/messages');
-// const User = require('./utils/users');
+const User = require('./utils/users');
 
 // connect to mongoDB
 const mongoDB = "mongodb+srv://BestForJune:97l8fkq4GFhz'@cluster0.8wr4h.mongodb.net/messdata?retryWrites=true&w=majority";
@@ -24,12 +24,39 @@ const io = socketio(server);
 
 app.use(express.json());
 app.use(express.static("public"));
-// default URL for website
-app.use('/', function(req,res){
-    res.sendFile(path.join(__dirname+'/public/main.html'));
-  });
+app.use(express.urlencoded({ extended: true })); 
 
-// connec to socket.io
+// setup view engine
+app.set('view engine', 'html');
+app.set('views', path.join(__dirname+'/public/main.html'));
+app.get('/', function(request, response){
+    response.sendFile(path.join(__dirname+'/public/main.html'));
+});
+
+// store new username and new password to database
+app.get('/register', function(request, response){
+    const username = request.query.uname;
+    const password = request.query.psw;
+    const newUser = new User({uname: username, psw: password});
+    newUser.save().then(()=>{
+        response.redirect('/room.html?uname='+username);
+    })
+});
+// load data from database
+app.get('/login', function(request, response){
+    const username = request.query.uname;
+    const password = request.query.psw;
+    User.findOne({uname: username, psw: password},function(err, results){
+        if (results === null){
+            response.redirect('/main.html');
+        }
+        else{
+            response.redirect('/room.html?uname='+username);
+        }
+    });
+});
+
+// connect to socket.io
 io.on('connection', socket=>{
     // to incoming user socket.emit();
     // to all users in the room io.emit();

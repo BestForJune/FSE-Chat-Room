@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!-- References: 
     Easy Tutorials "How To Create Login & Registration Form Using HTML CSS & JavaScript" https://www.youtube.com/watch?v=GAOBXGPuKqo
@@ -17,22 +16,22 @@
             </div>
 
             <div class = "form">
-                <form class="login-form" action="room.html">
+                <form class="login-form" method='GET' action="/login">
                     <input type="text" placeholder="Enter Username" name="uname" required>
-                    <input type="text" placeholder="Enter Password" name="psw" required>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
 
                     <button type="submit">Login</button>
 
-                    <p class="message">Need a Account? <a href="#">Sign up</a></p>
+                    <p class="message">Need a Account? <a>Sign up</a></p>
                 </form>
 
-                <form class="register-form" action="room.html">
-                    <input type="text" placeholder="New Username" name="uname" required>
-                    <input type="text" placeholder="New Password" name="psw" required>
+                <form method='GET' action="/register" class="register-form" >
+                    <input type="text" placeholder="New Username" id="uname" name="uname" required>
+                    <input type="password" placeholder="New Password" id="psw" name="psw" required>
     
                     <button type="submit">Register</button>
                     
-                    <p class="message">Already Have the Account? <a href="#">Log in</a></p>
+                    <p class="message">Already Have the Account? <a>Log in</a></p>
                 </form>
             </div>
         </div>
@@ -43,5 +42,7 @@
                 $('form').animate({height:"toggle", opacity:"toggle"});
             });
         </script>
+
+        <!-- <script src="./js/main.js"></script> -->
     </body>
 </html>

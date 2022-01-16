@@ -1,7 +1,9 @@
+// const for chat room
 const chatMessage = document.getElementById('send-container');
-const {uname, psw} = Qs.parse(location.search, {
+const {uname} = Qs.parse(location.search, {
     ignoreQueryPrefix: true
 });
+console.log(uname);
 
 // get message from server
 const socket = io();
