@@ -5,9 +5,9 @@ body {
   font-size: 14px;
 }
 html{
-  background-image: url("../images/chat2.jpg");
+  background-image: url("../images/chat.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
 }
 *:focus{
   outline:none;
