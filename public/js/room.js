@@ -3,7 +3,6 @@ const chatMessage = document.getElementById('send-container');
 const {uname} = Qs.parse(location.search, {
     ignoreQueryPrefix: true
 });
-console.log(uname);
 
 // get message from server
 const socket = io();
